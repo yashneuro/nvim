@@ -19,7 +19,7 @@ end
 local treesitter_obj = function()
 	require('nvim-treesitter.configs').setup({
 		indent = { enable = true },
-		ts_context_commentstring_enabled = true,
+--		ts_context_commentstring_enabled = true,
 		textobjects = {
 			lsp_interop = {
 				enable = false,

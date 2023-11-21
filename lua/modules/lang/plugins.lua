@@ -15,7 +15,7 @@ return function(lang)
 
 	lang({ 'haringsrob/nvim_context_vt', lazy = true, event = { 'CursorHold', 'WinScrolled', 'CursorMoved' }, config = conf.context_vt })
 
-	lang({ 'JoosepAlviste/nvim-ts-context-commentstring', lazy = true })
+	--lang({ 'JoosepAlviste/nvim-ts-context-commentstring', lazy = true })
 
 	lang({ 'windwp/nvim-ts-autotag', lazy = true })
 

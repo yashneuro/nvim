@@ -41,7 +41,7 @@ function Lazyload()
 
 	loader('nvim-treesitter')
 
-	local plugins = 'nvim-treesitter-textobjects nvim-ts-autotag nvim-ts-context-commentstring nvim-treesitter-textsubjects nvim-treesitter-context'
+	local plugins = 'nvim-treesitter-textobjects nvim-ts-autotag nvim-treesitter-textsubjects nvim-treesitter-context'
 	loader(plugins)
 	loader('refactoring.nvim')
 	loader('indent-blankline.nvim')
