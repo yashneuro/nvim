@@ -71,10 +71,10 @@ require('lspconfig').pyright.setup {
 	capabilities = M.capabilities,
 }
 
---require('lspconfig').tsserver.setup {
---	on_attach = M.on_attach,
---	capabilities = M.capabilities,
---}
+require('lspconfig').tsserver.setup {
+	on_attach = M.on_attach,
+	capabilities = M.capabilities,
+}
 
 --require('lspconfig').gopls.setup {
 --	on_attach = M.on_attach,

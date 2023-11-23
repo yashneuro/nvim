@@ -6,7 +6,7 @@ function config.nvim_lsp()
 end
 
 function config.mason()
-	local lsp_list = { 'lua-language-server', 'pyright' }
+	local lsp_list = { 'lua-language-server', 'pyright', 'typescript-language-server' }
 
 	require('mason').setup({
 		ensure_installed = lsp_list,
