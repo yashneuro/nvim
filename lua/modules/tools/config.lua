@@ -45,7 +45,7 @@ function config.floaterm()
 			winblend = 3,
 			highlights = {
 				border = 'Normal',
---				background = 'Normal',
+				background = 'Normal',
 			},
 		},
 	})
