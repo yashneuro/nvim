@@ -49,27 +49,29 @@ function config.nvim_cmp()
 	local cmp = require('cmp')
 
 	local sources = {
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-    { name = 'treesitter', keyword_length = 2 },
-    { name = 'emoji' },
+		{ name = 'nvim_lsp' },
+		{ name = 'luasnip' },
+		{ name = 'treesitter', keyword_length = 2 },
+		{ name = 'emoji' },
 		{ name = 'buffer' },
-    { name = 'path' },
+		{ name = 'path' },
 	}
 
 	if vim.o.ft == 'markdown' or vim.o.ft == 'txt' or vim.o.ft == 'html' or vim.o.ft == 'gitcommit' then
-    table.insert(sources, { name = 'spell' })
-    table.insert(sources, { name = 'look' })
+		table.insert(sources, { name = 'spell' })
+		table.insert(sources, { name = 'look' })
 	end
 
-  if vim.o.ft == 'lua' then
-    table.insert(sources, { name = 'nvim_lua' })
-  end
+	if vim.o.ft == 'lua' then
+		table.insert(sources, { name = 'nvim_lua' })
+	end
 
-  if vim.o.ft == 'zsh' or vim.o.ft == 'sh' or vim.o.ft == 'fish' or vim.o.ft == 'proto' then
-    table.insert(sources, { name = 'buffer', keyword_length = 3 })
-    table.insert(sources, { name = 'calc' })
-  end
+	if vim.o.ft == 'zsh' or vim.o.ft == 'sh' or vim.o.ft == 'fish' or vim.o.ft == 'proto' then
+		table.insert(sources, { name = 'buffer', keyword_length = 3 })
+		table.insert(sources, { name = 'calc' })
+	end
+
+	vim.api.nvim_set_hl(0, "transparentBG", { bg = "NONE", fg = "LightGray" })
 
 	cmp.setup({
 		require('luasnip.loaders.from_vscode').lazy_load(),
@@ -90,8 +92,13 @@ function config.nvim_cmp()
 
 		window = {
 			documentation = cmp.config.window.bordered({
-				winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
+				border = 'rounded',
+				winhighlight = "Normal:transparentBG,FloatBorder:transparentBG,CursorLine:transparentBG,Search:None",
 			}),
+			completion = cmp.config.window.bordered({
+				border = 'rounded',
+				winhighlight = "Normal:transparentBG,FloatBorder:transparentBG,CursorLine:PMenuSel,Search:None",
+			})
 		},
 
 		snippet = {
@@ -137,13 +144,13 @@ function config.nvim_cmp()
 		}),
 	})
 
-  cmp.setup.cmdline('/', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = {
-      { name = 'buffer' },
-      { name = 'cmdline_history' },
-    },
-  })
+	cmp.setup.cmdline('/', {
+		mapping = cmp.mapping.preset.cmdline(),
+		sources = {
+			{ name = 'buffer' },
+			{ name = 'cmdline_history' },
+		},
+	})
 end
 
 function config.vim_vsnip()
