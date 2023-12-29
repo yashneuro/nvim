@@ -180,7 +180,7 @@ function config.starry()
 			comments = true,
 			keywords = false,
 			functions = true,
-			variables = true,
+			variables = false,
 			strings = false,
 		},
 		contrast = {
@@ -189,13 +189,10 @@ function config.starry()
 		},
 		disable = {
 			background = true,
-			term_colors = false,
+			term_colors = true,
 		},
 		style = {
 			name = 'earlysummer',
-			fix = true,
-			darker_contrast = true,
-			deep_black = true,
 		},
 	})
 	vim.cmd('colorscheme starry')
