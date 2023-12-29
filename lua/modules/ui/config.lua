@@ -174,19 +174,30 @@ end
 --end
 
 function config.starry()
-	vim.g.starry_style = 'earlysummer'
-  vim.g.starry_bold = true
-  vim.g.starry_italic_comments = true
-  vim.g.starry_italic_keywords = false
-  vim.g.starry_italic_functions = true
-  vim.g.starry_italic_variables = false
-  vim.g.starry_italic_string = false
-  vim.g.starry_contrast = true
-  vim.g.starry_borders = true
-  vim.g.starry_set_hl = true
-  vim.g.starry_style_fix = true
-	vim.g.starry_disable_background = true
-
+	require('starry').setup({
+		border = false,
+		italics = {
+			comments = true,
+			keywords = false,
+			functions = true,
+			variables = true,
+			strings = false,
+		},
+		contrast = {
+			enable = true,
+			terminal = true,
+		},
+		disable = {
+			background = true,
+			term_colors = false,
+		},
+		style = {
+			name = 'earlysummer',
+			fix = true,
+			darker_contrast = true,
+			deep_black = true,
+		},
+	})
 	vim.cmd('colorscheme starry')
 end
 
