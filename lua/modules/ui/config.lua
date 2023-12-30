@@ -35,7 +35,7 @@ function config.nvim_bufferline()
 	require('bufferline').setup({
 		options = {
 			indicator = {
-				icon = '▊',
+				icon = '▓▒░',
 				style = 'icon',
 			},
 			truncate_names = false,
@@ -160,6 +160,7 @@ function config.nvim_tree()
 			dotfiles = false,
 		},
 	})
+	vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = 'None' })
 end
 
 --function config.cat()
@@ -189,7 +190,7 @@ function config.starry()
 		},
 		disable = {
 			background = true,
-			term_colors = true,
+			term_colors = false,
 		},
 		style = {
 			name = 'earlysummer',
