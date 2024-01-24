@@ -7,6 +7,7 @@ M.on_attach = function(client, bufnr)
 	client.server_capabilities.documentRangeFormattingProvider = false
 
 	local opts = { noremap = true, silent = true, buffer = bufnr }
+	vim.diagnostic.config({ update_in_insert = true })
 
 	-- set keybinds
 	keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)

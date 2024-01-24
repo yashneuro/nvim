@@ -61,6 +61,10 @@ local load_core = function()
 	disable_distribution_plugins()
 	leader_map()
 
+	-- set undercurl
+	vim.cmd([[let &t_Cs = "\e[4:3m]"]])
+	vim.cmd([[let &t_Ce = "\e[4:0m]"]])
+
 	-- disable highlights
 	vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'None' })
 	vim.api.nvim_set_hl(0, 'Normal', { bg = 'None' })
