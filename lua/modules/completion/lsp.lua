@@ -8,6 +8,9 @@ M.on_attach = function(client, bufnr)
 
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 	vim.diagnostic.config({ update_in_insert = true })
+	vim.diagnostic.config({ virtual_text = {
+		prefix = "●",
+	}})
 
 	-- set keybinds
 	keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
