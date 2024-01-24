@@ -1,10 +1,5 @@
 local config = {}
 
-function config.syntax_folding()
-	vim.api.nvim_command('setlocal foldmethod=expr')
-	vim.api.nvim_command('setlocal foldexpr=nvim_treesitter#foldexpr()')
-end
-
 function config.refactor()
 	local refactor = require('refactoring')
 
