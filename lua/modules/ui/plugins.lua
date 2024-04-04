@@ -15,10 +15,6 @@ return function(ui)
 	})
 
 	ui({
-		'lambdalisue/glyph-palette.vim'
-	})
-
-	ui({
 		'folke/noice.nvim',
 		lazy = true,
 		dependencies = { 'MunifTanjim/nui.nvim', lazy = true },
@@ -58,7 +54,5 @@ return function(ui)
 		name = 'starry',
 		config = conf.starry,
 	})
-
-	ui({ 'lambdalisue/glyph-palette.vim' })
 
 end
