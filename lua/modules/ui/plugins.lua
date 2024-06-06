@@ -41,18 +41,18 @@ return function(ui)
 		config = conf.blankline,
 	})
 
---	ui({
---		'catppuccin/nvim',
---		lazy = true,
---		name = 'catppuccin',
---		config = conf.cat,
---	})
-
 	ui({
-		'ray-x/starry.nvim',
+		'catppuccin/nvim',
 		lazy = true,
-		name = 'starry',
-		config = conf.starry,
+		name = 'catppuccin',
+		config = conf.cat,
 	})
+
+--	ui({
+--		'ray-x/starry.nvim',
+--		lazy = true,
+--		name = 'starry',
+--		config = conf.starry,
+--	})
 
 end

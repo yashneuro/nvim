@@ -66,11 +66,11 @@ local load_core = function()
 	vim.cmd([[let &t_Ce = "\e[4:0m]"]])
 
 	-- disable highlights
-	vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'None' })
-	vim.api.nvim_set_hl(0, 'Normal', { bg = 'None' })
-	vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'None' })
-	vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'None' })
-	vim.api.nvim_set_hl(0, 'FoldColumn', { bg = 'None' })
+--	vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'None' })
+--	vim.api.nvim_set_hl(0, 'Normal', { bg = 'None' })
+--	vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'None' })
+--	vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'None' })
+--	vim.api.nvim_set_hl(0, 'FoldColumn', { bg = 'None' })
 
 	vim.env.PATH = vim.env.PATH .. ":" .. vim.fn.stdpath "data" .. "/mason/bin"
 

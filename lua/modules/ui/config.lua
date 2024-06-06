@@ -163,47 +163,47 @@ function config.nvim_tree()
 	vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = 'None' })
 end
 
---function config.cat()
---	require('catppuccin').setup({
---		flavor = 'mocha',
---		lsp_trouble = false,
---		transparent_background = true,
---		dim_inactive = { enabled = false },
---	})
---
---	vim.cmd('colorscheme catppuccin')
---end
-
-function config.starry()
-	require('starry').setup({
-		border = false,
-		italics = {
-			comments = true,
-			keywords = false,
-			functions = true,
-			variables = false,
-			strings = false,
-		},
-		contrast = {
-			enable = true,
-			terminal = true,
-		},
-		disable = {
-			background = true,
-			term_colors = false,
-		},
-		style = {
-			name = 'earlysummer',
-		},
+function config.cat()
+	require('catppuccin').setup({
+		flavor = 'mocha',
+		lsp_trouble = false,
+		transparent_background = true,
+		dim_inactive = { enabled = false },
 	})
-	vim.cmd('colorscheme starry')
+
+	vim.cmd('colorscheme catppuccin')
 end
 
-vim.api.nvim_create_user_command('Transparent', function()
-	vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE', ctermbg = 'NONE' })
-	vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE', ctermbg = 'NONE' })
-	vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'NONE', ctermbg = 'NONE' })
-end, { nargs = '*' })
+--function config.starry()
+--	require('starry').setup({
+--		border = false,
+--		italics = {
+--			comments = true,
+--			keywords = false,
+--			functions = true,
+--			variables = false,
+--			strings = false,
+--		},
+--		contrast = {
+--			enable = true,
+--			terminal = true,
+--		},
+--		disable = {
+--			background = true,
+--			term_colors = false,
+--		},
+--		style = {
+--			name = 'earlysummer',
+--		},
+--	})
+--	vim.cmd('colorscheme starry')
+--end
+
+--vim.api.nvim_create_user_command('Transparent', function()
+--	vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE', ctermbg = 'NONE' })
+--	vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE', ctermbg = 'NONE' })
+--	vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'NONE', ctermbg = 'NONE' })
+--end, { nargs = '*' })
 
 function config.blankline()
 	vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
