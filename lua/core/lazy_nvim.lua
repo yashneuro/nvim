@@ -52,6 +52,13 @@ function lazy:boot_strap()
   local opts = {
     lockfile = helper.get_data_path() .. sep .. 'lazy-lock.json',
     dev = { path = '~/github/probe2k' },
+		ui = {
+			border = "single",
+			size = {
+				width = 0.8,
+				height = 0.8,
+			},
+		},
   }
   self:load_modules_lazyages()
   lz.setup(self.plug, opts)
