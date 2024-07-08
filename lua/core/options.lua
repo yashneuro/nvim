@@ -53,7 +53,6 @@ local function load_options()
 		cursorline     = false;
 		number         = true;
 		guicursor      = "";
-		shortmess      = "I";
 	}
 
 	for name, value in pairs(global_local) do
