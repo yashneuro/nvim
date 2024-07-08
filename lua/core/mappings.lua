@@ -23,6 +23,7 @@ local function load_mappings()
 		['<leader>b']	= ':Telescope buffers<CR>',
 		['<C-\\>']		= ':ToggleTerm<CR>',
 		['<leader>l']	= ':Lazy<CR>',
+		['<leader>g']	= ':Goyo<CR>',
 	}
 
 	for name, value in pairs(maps) do

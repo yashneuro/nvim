@@ -8,10 +8,16 @@ return function(editor)
 	})
 
 	editor({
-		'rrethy/vim-hexokinase',
-		config = conf.hexokinase,
-		build = 'make hexokinase',
+		'junegunn/goyo.vim',
 		lazy = true,
-		cmd = { 'HexokinaseTurnOn', 'HexokinaseToggle' },
+		cmd = { 'Goyo' },
 	})
+
+--	editor({
+--		'rrethy/vim-hexokinase',
+--		config = conf.hexokinase,
+--		build = 'make hexokinase',
+--		lazy = true,
+--		cmd = { 'HexokinaseTurnOn', 'HexokinaseToggle' },
+--	})
 end

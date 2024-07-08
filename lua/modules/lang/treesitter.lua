@@ -1,4 +1,4 @@
-local ts_ensure_installed = { "go", "css", "html", "javascript", "typescript", "json", "c", "java", "toml", "tsx", "lua", "cpp", "python", "rust", "yaml", "vim", "markdown", "markdown_inline" }
+local ts_ensure_installed = { "go", "css", "json", "c", "java", "toml", "tsx", "lua", "cpp", "python", "rust", "yaml", "vim", "markdown", "markdown_inline" }
 
 local treesitter = function()
 	local has_ts = pcall(require, 'nvim-treesitter.configs')

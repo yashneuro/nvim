@@ -61,7 +61,7 @@ vim.defer_fn(function()
 	vim.cmd('highlight clear ColorColumn')
 	loader('noice.nvim')
 	require('modules.ui.lualine')
-	loader('vim-hexokinase')
+--	loader('vim-hexokinase')
 end, lazy_timer + 5)
 
 vim.defer_fn(function()
