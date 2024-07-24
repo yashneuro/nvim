@@ -53,6 +53,7 @@ local function load_options()
 		cursorline     = false;
 		number         = true;
 		guicursor      = "";
+		signcolumn     = "yes";
 	}
 
 	for name, value in pairs(global_local) do
