@@ -233,7 +233,7 @@ function config.blankline()
 			'NvimTree',
 		},
 		show_trailing_blankline_indent = false,
-		show_first_indent_level = false,
+		show_first_indent_level = true,
 		buftype_exclude = { 'terminal' },
 		space_char_blankline = ' ',
 		use_treesitter = true,
