@@ -17,8 +17,8 @@ local function load_options()
 		viewdir        = global.cache_dir .. "view/";
 		history        = 4000;
 		backupskip     = "/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*,/private/var/*,.vault.vim";
-		tabstop        = 2;
-		shiftwidth     = 2;
+		tabstop        = 4;
+		shiftwidth     = 4;
 		smartindent    = true;
 		shiftround     = true;
 		ignorecase     = true;
@@ -36,7 +36,7 @@ local function load_options()
 		laststatus     = 3;
 		display        = "lastline";
 		list           = true;
-		showbreak      = "󱞩";
+		showbreak      = "↪ ";
 		listchars      = "tab:┊ ,nbsp:+,trail:·,extends:→,precedes:←,eol:↲";
 		title          = true;
 		background     = "dark";

@@ -6,20 +6,20 @@ function config.nvim_lsp()
 end
 
 function config.mason()
-	local lsp_list = { 'lua-language-server', 'pyright', 'typescript-language-server' }
+	local lsp_list = { 'lua-language-server' }
 
 	require('mason').setup({
 		ensure_installed = lsp_list,
 
 		PATH = 'skip',
 
-		ui = {
-			icons = {
-				package_pending = ' ',
-				package_installed = '󰄳 ',
-				package_uninstalled = ' 󰚌',
-			},
-		},
+--		ui = {
+--			icons = {
+--				package_pending = ' ',
+--				package_installed = '󰄳 ',
+--				package_uninstalled = ' 󰚌',
+--			},
+--		},
 
 		max_concurrent_installers = 10,
 	})
@@ -33,6 +33,9 @@ end
 
 function config.lspsaga()
 	require('lspsaga').setup({
+		symbol_in_winbar = {
+			enable = false,
+		},
 		scroll_preview = { scroll_down = '<C-f>', scroll_up = '<C-b>' },
 		definition = {
 			edit = '<CR>',
@@ -79,12 +82,12 @@ function config.nvim_cmp()
 		preselect = cmp.PreselectMode.None,
 
 		formatting = {
-			fields = { "kind", "abbr", "menu" },
+			fields = { "abbr", "menu" },
 			format = function(entry, vim_item)
 				local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
 				local strings = vim.split(kind.kind, "%s", { trimempty = true })
 				kind.kind = " " .. (strings[1] or "") .. " "
-				kind.menu = " 󰜴  (" .. (strings[2] or "") .. ")"
+				kind.menu = " 💥  (" .. (strings[2] or "") .. ")"
 
 				return kind
 			end,
@@ -164,9 +167,14 @@ end
 function config.telescope()
 	local actions = require('telescope.actions')
 	require('telescope').setup({
+		pickers = {
+			find_files = {
+				disable_devicons = true
+			},
+		},
 		defaults = {
-			prompt_prefix = '🙊 ',
-			selection_caret = [[🦑 ]],
+			prompt_prefix = '👀 ',
+			selection_caret = [[✍🏻 ]],
 			layout_strategy = 'flex',
 			sorting_strategy = 'ascending',
 			selection_strategy = 'closest',

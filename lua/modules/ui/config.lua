@@ -6,6 +6,15 @@ function config.noice()
 		cmdline = {
 			enabled = true,
 			view = 'cmdline_popup',
+			format = {
+				cmdline = { pattern = "^:", icon = "💻 ", lang = "vim" },
+				search_down = { kind = "search", pattern = "^/", icon = "🔍 ", lang = "regex" },
+				search_up = { kind = "search", pattern = "^/", icon = "🔍 ", lang = "regex" },
+				filter = { pattern = "^:%s*!", icon = "$", lang = "bash" },
+				lua = { pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" }, icon = "💀 ", lang = "lua" },
+				help = { pattern = "^:%s*he?l?p?%s+", icon = "❓ " },
+				input = { view = "cmdline_input", icon = "🖊️  " },
+			},
 		},
 
 		messages = {
@@ -41,14 +50,14 @@ function config.nvim_bufferline()
 			truncate_names = false,
 			modified_icon = '●',
 			color_icons = true,
-			show_buffer_icons = true,
+			show_buffer_icons = false,
 			show_buffer_close_icons = false,
 			separator_style = thin,
-			left_trunc_marker = '<U+F0A8>',
-			right_trunc_marker = '<U+F0A9>',
+			left_trunc_marker = '◀️',
+			right_trunc_marker = '▶️',
 			diagnostics = 'nvim_lsp',
 			diagnostics_indicator = function(count, level)
-				local icon = level:match('error') and ' ' or ' '
+				local icon = level:match('error') and '⛔️ ' or '❗️ '
 				return ' ' .. icon .. count
 			end,
 			always_show_bufferline = false,
@@ -126,34 +135,34 @@ function config.nvim_tree()
 
 			icons = {
 				show = {
-					file = true,
-					folder = true,
-					folder_arrow = true,
-					git = true,
+					file = false,
+					folder = false,
+					folder_arrow = false,
+					git = false,
 				},
-				glyphs = {
-					default = '',
-					symlink = '',
-					folder = {
-						default = '',
-						empty = '',
-						empty_open = '',
-						open = '',
-						symlink = '',
-						symlink_open = '',
-						arrow_open = '',
-						arrow_closed = '',
-					},
-					git = {
-						unstaged = '✗',
-						staged = '✓',
-						unmerged = '',
-						renamed = '➜',
-						untracked = '★',
-						deleted = '',
-						ignored = '◌',
-					},
-				},
+--				glyphs = {
+--					default = '',
+--					symlink = '',
+--					folder = {
+--						default = '',
+--						empty = '',
+--						empty_open = '',
+--						open = '',
+--						symlink = '',
+--						symlink_open = '',
+--						arrow_open = '',
+--						arrow_closed = '',
+--					},
+--					git = {
+--						unstaged = '✗',
+--						staged = '✓',
+--						unmerged = '',
+--						renamed = '➜',
+--						untracked = '★',
+--						deleted = '',
+--						ignored = '◌',
+--					},
+--				},
 			},
 		},
 		filters = {
@@ -215,7 +224,8 @@ function config.blankline()
 
 	require('indent_blankline').setup({
 		enabled = true,
-		char_list = { '', '┊', '┆', '¦', '|', '¦', '┆', '┊', '' },
+--		char_list = { '⏐', '┊', '┆', '¦', '|', '¦', '┆', '┊', '⏐' },
+--		char_list = { '│' },
 		filetype_exclude = {
 			'help',
 			'startify',

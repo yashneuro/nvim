@@ -54,12 +54,12 @@ end
 function config.git()
 	require('gitsigns').setup({
 		signs = {
-			add = { text = "╿" },
-			change = { text = "⍿" },
-			delete = { text = "󰗨" },
-			topdelete = { text = "󰠙" },
-			changedelete = { text = "󱕗" },
-			untracked = { text = "║" },
+			add = { text = "➕" },
+			change = { text = "♾️ " },
+			delete = { text = "➖" },
+			topdelete = { text = "➖" },
+			changedelete = { text = "➖" },
+			untracked = { text = "🟰" },
 		},
 		update_debounce = 400,
 		numhl = true,
