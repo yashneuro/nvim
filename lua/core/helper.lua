@@ -38,13 +38,13 @@ local helper = {
 			if Plugin_debug ~= nil then
 				return Plugin_debug
 			end
-			local host = os.getenv('HOST_NAME') or vim.fn.hostname()
-			if host and host:lower():find('ray') then
-				Plugin_debug = true -- enable debug here, will be slow
-			else
-				Plugin_debug = false
-			end
-			return Plugin_debug
+--			local host = os.getenv('HOST_NAME') or vim.fn.hostname()
+--			if host and host:lower():find('ray') then
+--				Plugin_debug = true -- enable debug here, will be slow
+--			else
+--				Plugin_debug = false
+--			end
+			return false
 		end
 	end,
 
@@ -71,17 +71,17 @@ _G.use_efm = function()
 	return false
 end
 
-_G.plugin_folder = function()
-	if Plugin_folder then
-		return Plugin_folder
-	end
-	local host = os.getenv('HOST_NAME')
-	if host and host:lower():find('probe2k') then
-		Plugin_folder = [[~/github/probe2k/]] -- vim.fn.expand("$HOME") .. '/github/'
-	else
-		Plugin_folder = [[probe2k/]]
-	end
-	return Plugin_folder
-end
+--_G.plugin_folder = function()
+--	if Plugin_folder then
+--		return Plugin_folder
+--	end
+--	local host = os.getenv('HOST_NAME')
+--	if host and host:lower():find('probe2k') then
+--		Plugin_folder = [[~/github/probe2k/]] -- vim.fn.expand("$HOME") .. '/github/'
+--	else
+--		Plugin_folder = [[probe2k/]]
+--	end
+--	return Plugin_folder
+--end
 
 return helper

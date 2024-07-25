@@ -1,5 +1,4 @@
 local conf = require('modules.lang.config')
-local dev = plugin_folder():find('github') ~= nil or plugin_folder():find('probe2k') ~= nil
 local ts = require('modules.lang.treesitter')
 
 return function(lang)

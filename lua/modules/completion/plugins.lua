@@ -23,7 +23,7 @@ return function(use)
 			{ 'hrsh7th/cmp-cmdline', lazy = true },
 			{ 'dmitmel/cmp-cmdline-history', lazy = true },
 			{ 'hrsh7th/cmp-emoji', lazy = true },
-			{ 'ray-x/cmp-treesitter', dev = (plugin_folder():find('github') ~= nil), lazy = true },
+			{ 'ray-x/cmp-treesitter', lazy = true },
 			{ 'saadparwaiz1/cmp_luasnip', lazy = true },
 		},
 
