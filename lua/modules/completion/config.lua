@@ -14,6 +14,7 @@ function config.mason()
 		PATH = 'skip',
 
 		ui = {
+			border = 'single',
 			icons = {
 				package_pending = '🟡 ',
 				package_installed = '🟢 ',
