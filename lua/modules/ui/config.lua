@@ -205,7 +205,7 @@ end
 --			name = 'earlysummer',
 --		},
 --	})
---	vim.cmd('colorscheme starry')
+--	vim.cmd('colorscheme moonlight')
 --end
 
 --vim.api.nvim_create_user_command('Transparent', function()

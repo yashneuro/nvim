@@ -54,5 +54,4 @@ return function(ui)
 --		name = 'starry',
 --		config = conf.starry,
 --	})
-
 end
