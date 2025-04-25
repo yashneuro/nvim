@@ -185,7 +185,15 @@ end
 
 function config.osaka()
 	require('solarized-osaka').setup({
-		transparent = true
+		transparent = true,
+		styles = {
+			comments = { italic = true },
+			keywords = { italic = true },
+			functions = {},
+			variables = {},
+			sidebars = "dark",
+			floats = "dark"
+		},
 	})
 
 	vim.cmd('colorscheme solarized-osaka')

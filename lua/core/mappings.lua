@@ -14,6 +14,8 @@ local function load_mappings()
 		['<C-h>']			= '<C-W><C-H>',
 		['<C-_>']			= '<C-W><C-<>',
 		['<C-+>']			= '<C-W><C->>',
+		['<C-v>']			= '<C-W><C-v>',
+		['<C-s>']			= '<C-W><C-s>',
 		['<A-Down>']	= '<C-W><C-+>',
 		['<A-Up>']		= '<C-W><C-->',
 		['<Esc>']			= ':noh<CR>',
