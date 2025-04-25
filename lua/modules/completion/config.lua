@@ -175,7 +175,7 @@ function config.telescope()
 		},
 		defaults = {
 			prompt_prefix = '👀 ',
-			selection_caret = [[✍🏻 ]],
+			selection_caret = [[👉 ]],
 			layout_strategy = 'flex',
 			sorting_strategy = 'ascending',
 			selection_strategy = 'closest',

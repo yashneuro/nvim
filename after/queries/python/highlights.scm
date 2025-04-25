@@ -25,7 +25,7 @@
 
 ; Functions
 ((lambda "lambda" @keyword.function) (#set! conceal "λ"))
-((function_definition "def" @keyword.function) (#set! conceal " "))
+((function_definition "def" @keyword.function) (#set! conceal "󰡱 "))
 ((function_definition "->" @operator) (#set! conceal ""))
 ((function_definition body: (block (return_statement "return" @keyword.return))) (#set! conceal "󰌑"))
 ((function_definition parameters: (parameters (identifier) @parameter (#eq? @parameter "self"))) (#set! conceal "󰰣"))
