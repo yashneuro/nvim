@@ -1,4 +1,4 @@
-local loading_theme = 'catppuccin'
+local loading_theme = 'solarized-osaka'
 
 local function load_colorscheme(theme)
 	if not theme then

@@ -41,11 +41,18 @@ return function(ui)
 		config = conf.blankline,
 	})
 
+--	ui({
+--		'catppuccin/nvim',
+--		lazy = true,
+--		name = 'catppuccin',
+--		config = conf.cat,
+--	})
+
 	ui({
-		'catppuccin/nvim',
+		"craftzdog/solarized-osaka.nvim",
 		lazy = true,
-		name = 'catppuccin',
-		config = conf.cat,
+		name = 'solarized-osaka',
+		config = conf.osaka,
 	})
 
 --	ui({

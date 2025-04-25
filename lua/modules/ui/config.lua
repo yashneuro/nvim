@@ -183,6 +183,14 @@ function config.cat()
 	vim.cmd('colorscheme catppuccin')
 end
 
+function config.osaka()
+	require('solarized-osaka').setup({
+		transparent = true
+	})
+
+	vim.cmd('colorscheme solarized-osaka')
+end
+
 --function config.starry()
 --	require('starry').setup({
 --		border = false,
